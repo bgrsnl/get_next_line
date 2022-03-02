@@ -6,7 +6,7 @@
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:28:11 by bsenol            #+#    #+#             */
-/*   Updated: 2022/02/28 17:35:57 by bsenol           ###   ########.tr       */
+/*   Updated: 2022/03/02 07:57:14 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ char	*ft_save(char *src)
 	free(src);
 	return (str);
 }
+
 char	*ft_strchr(const char *s, int x)
 {
 	while (*s)

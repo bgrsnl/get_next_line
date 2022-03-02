@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/02 07:56:17 by bsenol            #+#    #+#             */
+/*   Updated: 2022/03/02 07:56:38 by bsenol           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*next_line(char *src, int fd)
 {
 	char	*buffer;
-	int	size;
+	int		size;
 
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE +1));
 	if (buffer == NULL)
@@ -29,11 +41,22 @@ char	*next_line(char *src, int fd)
 
 char	*get_next_line(int fd)
 {
-	char	*line;
+	char		*line;
 	static char	*next_line;
 
 	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	next_line = next_line(next line, fd)
+	next_line = next_line(next line, fd);
+	if (next_line == NULL)
+		return (NULL);
+	line = ft_read_line(next_line);
+	next_line = ft_save(next_line);
+	if (line[0] == '\0')
+	{
+		free(next_line);
+		free(line);
+		return (NULL);
+	}
+	return (line);
 }

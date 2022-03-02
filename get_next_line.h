@@ -6,7 +6,7 @@
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:47:28 by bsenol            #+#    #+#             */
-/*   Updated: 2022/02/28 14:13:11 by bsenol           ###   ########.tr       */
+/*   Updated: 2022/03/02 07:59:22 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,8 @@
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const voidi *s, int x);
+char	*ft_strjoin(cinst char *s1, char const ,s2);
+char	*ft_read_line(char *src);
+char	*ft_save(char *src);
+
 #endif
