@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 07:56:17 by bsenol            #+#    #+#             */
-/*   Updated: 2022/03/02 14:57:25 by bsenol           ###   ########.tr       */
+/*   Created: 2022/03/02 16:11:42 by bsenol            #+#    #+#             */
+/*   Updated: 2022/03/02 16:11:47 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+
+
+#include "get_next_line_bonus.h"
 
 char	*get_line(char *src, int fd)
 {
@@ -39,21 +41,22 @@ char	*get_line(char *src, int fd)
 	return (src);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line_bonus(int fd)
 {
 	char		*line;
-	static char	*next_line;
+	static char	*next_line[OPEN_MAX];
 
+	line = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	next_line = get_line(next_line, fd);
-	if (next_line == NULL)
+	next_line[fd] = get_line(next_line[fd], fd);
+	if (next_line[fd] == NULL)
 		return (NULL);
-	line = ft_read_line(next_line);
-	next_line = ft_save(next_line);
+	line = ft_read_line(next_line[fd]);
+	next_line[fd] = ft_save(next_line[fd]);
 	if (line[0] == '\0')
 	{
-		free(next_line);
+		free(next_line[fd]);
 		free(line);
 		return (NULL);
 	}

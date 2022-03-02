@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
+/*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 16:12:36 by bsenol            #+#    #+#             */
-/*   Updated: 2022/03/02 16:12:38 by bsenol           ###   ########.tr       */
+/*   Created: 2021/11/30 03:56:51 by ablaamim          #+#    #+#             */
+/*   Updated: 2021/12/10 10:19:29 by ablaamim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-
-
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {
