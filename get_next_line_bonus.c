@@ -6,11 +6,9 @@
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:11:42 by bsenol            #+#    #+#             */
-/*   Updated: 2022/03/02 16:11:47 by bsenol           ###   ########.tr       */
+/*   Updated: 2022/03/03 12:07:08 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "get_next_line_bonus.h"
 
@@ -41,7 +39,7 @@ char	*get_line(char *src, int fd)
 	return (src);
 }
 
-char	*get_next_line_bonus(int fd)
+char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*next_line[OPEN_MAX];

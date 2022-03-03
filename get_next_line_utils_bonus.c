@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ablaamim <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 03:56:51 by ablaamim          #+#    #+#             */
-/*   Updated: 2021/12/10 10:19:29 by ablaamim         ###   ########.fr       */
+/*   Created: 2022/03/03 13:05:58 by bsenol            #+#    #+#             */
+/*   Updated: 2022/03/03 13:06:06 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	*ft_save(char *src)
 		free(src);
 		return (0);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_strlen(src) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(src) - i));
 	if (str == NULL)
 		return (NULL);
 	i = i + 1;

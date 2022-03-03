@@ -6,12 +6,9 @@
 /*   By: bsenol <bsenol@student.42kocaeli.com.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:12:36 by bsenol            #+#    #+#             */
-/*   Updated: 2022/03/02 16:12:38 by bsenol           ###   ########.tr       */
+/*   Updated: 2022/03/03 12:23:37 by bsenol           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* ************************************************************************** */
-
 
 #include "get_next_line.h"
 
@@ -108,7 +105,7 @@ char	*ft_save(char *src)
 		free(src);
 		return (0);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_strlen(src) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(src) - i));
 	if (str == NULL)
 		return (NULL);
 	i = i + 1;
